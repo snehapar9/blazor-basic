@@ -29,7 +29,7 @@ jobs:
       - name: Build and push container image to registry
         uses: azure/container-apps-deploy-action@v0
         with:
-          appSourcePath: ./
+          appSourcePath: $GITHUB_WORKSPACE
           acrName: snehaparacr
           acrUsername: ${{ secrets.CASNEHAPARSAMPLETESTAPP1_REGISTRY_USERNAME }}
           acrPassword: ${{ secrets.CASNEHAPARSAMPLETESTAPP1_REGISTRY_PASSWORD }}
