@@ -30,7 +30,7 @@ jobs:
         uses: azure/container-apps-deploy-action@v0
         with:
           appSourcePath: ./
-          acrName: snehaparacr.azurecr.io
+          acrName: snehaparacr
           acrUsername: secrets.CASNEHAPARSAMPLETESTAPP1_REGISTRY_USERNAME
           acrPassword: secrets.CASNEHAPARSAMPLETESTAPP1_REGISTRY_PASSWORD
           containerAppName: ca-snehapar-sample-test-app1
