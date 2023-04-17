@@ -31,8 +31,8 @@ jobs:
         with:
           appSourcePath: ./
           acrName: snehaparacr
-          acrUsername: secrets.CASNEHAPARSAMPLETESTAPP1_REGISTRY_USERNAME
-          acrPassword: secrets.CASNEHAPARSAMPLETESTAPP1_REGISTRY_PASSWORD
+          acrUsername: ${{ secrets.CASNEHAPARSAMPLETESTAPP1_REGISTRY_USERNAME }}
+          acrPassword: ${{ secrets.CASNEHAPARSAMPLETESTAPP1_REGISTRY_PASSWORD }}
           containerAppName: ca-snehapar-sample-test-app1
           resourceGroup: ca-snehapar-group
           imageToBuild: snehaparacr.azurecr.io/container-app-d5zvpovhvmlik:${{ github.sha }}
