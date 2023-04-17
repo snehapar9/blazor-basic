@@ -20,14 +20,14 @@ jobs:
     steps:
       - name: Checkout to the branch
         uses: actions/checkout@v2
+      - name: Install Azure-cli
+        uses: elstudio/action-install-azure-cli@v1    
+  
 
       - name: Azure Login
         uses: azure/login@v1
         with:
           creds: ${{ secrets.CASNEHAPARSAMPLETESTAPP1_AZURE_CREDENTIALS }}
-      - name: Install Azure-cli
-        uses: elstudio/action-install-azure-cli@v1    
-
       - name: Build and push container image to registry
         uses: azure/container-apps-deploy-action@v0
         with:
